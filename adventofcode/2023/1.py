@@ -19,6 +19,7 @@ for line in input.readlines():
     pos = 0
 
     # Track all words in line
+    #! This is actually not necessary, but I left it in the solution because it was my original approach
     for (key, value) in alpha.items():
         if (pos := line.find(key)) > -1:
             track = [[key, pos]] + track
