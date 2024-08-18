@@ -16,12 +16,12 @@ int main() {
         exit(1);
     } else if (ps == 0) {
         fprintf(stdout, "CHILD PROCESS EXITING (PID: %d)\n", (int) getpid());
-        exit(0);
-    } else {
-        fprintf(stdout, "CHILD PROCESS IS (PID: %d)\n", (int) ps);
         fprintf(stdout, "--CHILD PROCESS VALUE OF X IS (%d)\n", x);
         x = 25;
         fprintf(stdout, "--CHILD PROCESS VALUE OF X IS (%d)\n", x);
+        exit(0);
+    } else {
+        fprintf(stdout, "CHILD PROCESS IS (PID: %d)\n", (int) ps);
         exit(0);
     }
 
