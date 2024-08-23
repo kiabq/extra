@@ -2,3 +2,4 @@
 *.class
 *.out
 node_modules/
+*.swp
