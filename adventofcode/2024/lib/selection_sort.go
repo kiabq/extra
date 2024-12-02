@@ -8,7 +8,7 @@ func Sort(list []int) []int {
 		var min int = i
 		var temp int
 
-		for j := 1; j < len(list)+1; j++ {
+		for j := i + 1; j < len(list); j++ {
 			if sorted[j] < sorted[min] {
 				min = j
 			}
