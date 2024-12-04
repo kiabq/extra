@@ -41,23 +41,23 @@ func main() {
 			if i > 0 && safe == true {
 				if curr == prev {
 					safe = false
-					continue
+					break
 				}
 
 				if increasing == true && curr < prev {
 					safe = false
-					continue
+					break
 				}
 
 				if increasing == false && curr > prev {
 					safe = false
-					continue
+					break
 				}
 
 				diff = int(math.Abs(float64(curr - prev)))
 				if diff < min || diff > max {
 					safe = false
-					continue
+					break
 				}
 			}
 
@@ -68,7 +68,6 @@ func main() {
 			sum++
 		}
 
-		fmt.Println(increasing)
-		fmt.Printf("------- %d -------\n", sum)
+		fmt.Println(sum)
 	}
 }
